@@ -32,8 +32,7 @@ $(document).ready(function() {
         var searchURL = makeSearch();
         $.ajax({
             url: searchURL,
-            method: 'GET',
-            dataType: 'jsonp'
+            method: 'GET'
         }).then(newPage())
         .catch(function(err) {alert('error:' + err.message);})
     });
