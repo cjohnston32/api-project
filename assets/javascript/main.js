@@ -9,7 +9,7 @@ function makeSearch() {
     var userInput = $('#searchTopic').val();
 
     // --- PARAMETERS for Pro Publica Nonprofit API Searches ---
-        // More Information: https://projects.propublica.org/nonprofits/api#methods
+        // More Information: https://projects.propublica.org/nonprofits/api
         // '?q=' : Keyword search string (name of nonprofit)
         searchURL += '?q=' + userInput;
     console.log(searchURL);
@@ -20,7 +20,7 @@ function makeSearch() {
  * @param {object} npAPI
  */
 
-// newPage() - updates the page
+// newPage() - for new page
 function newPage(npAPI) {
     console.log(npAPI.total_results);
 };
@@ -33,7 +33,7 @@ $(document).ready(function() {
         $.ajax({
             url: searchURL,
             method: 'GET'
-        }).then(newPage())
+        }).then(newPage)
         .catch(function(err) {alert('error:' + err.message);})
     });
 })
