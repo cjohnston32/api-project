@@ -1,8 +1,13 @@
+// CORS
+
 jQuery.ajaxPrefilter(function(options) {
     if (options.crossDomain && jQuery.support.cors) {
         options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
     }
 });
+
+
+
 
 /**
  * @returns {string}
@@ -29,10 +34,7 @@ function makeSearch() {
 
 // newPage() - for new page
 function newPage(npAPI) {
-    console.log(npAPI.articles);
-    var artDesc = npAPI.articles[0];
-    console.log(artDesc);
-    document.getElementById('test').innerHTML = artDesc;
+    console.log(npAPI.organizations);
 };
 
 // When user submits search
