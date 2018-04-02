@@ -12,7 +12,10 @@ jQuery.ajaxPrefilter(function(options) {
 function makeSearch() {
     var searchURL = 'https://projects.propublica.org/nonprofits/api/v2/search.json';
     var userInput = $('#searchTopic').val();
-
+    // Space remover and quote adder for URL encoder
+        userInput += '%22';
+        userInput = '%22' + userInput;
+        userInput = userInput.replace(/ /g, '%20');
     searchURL += '?q=' + userInput;
     console.log(searchURL);
     return searchURL;
