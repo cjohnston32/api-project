@@ -8,15 +8,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src='assets/javascript/npIndex.js' type='application/javascript'></script>
+    <style src="/Users/mackflo/gt/MackFlo/api-project/style.css"></style>
 </head>
 <body>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="./homeone.html">Get Educated</a>
+                <a class="navbar-brand" href="./inde.html">Get Educated</a>
         </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="./homeone.html">Home</a></li>
+                <li class="active"><a href="./inde.html">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -26,21 +27,62 @@
         <div class="jumbotron text-center">
             <h1>Get Educated</h1>
         </div>
-   
+    <div id="search">
     <div class="row">
         <div class="col-md-6 col-md-offset-3" >
     <br>
-        <form class="form-inline">
+
+
+        <form class="form" action="">
             <div class="form-group">
                 <lable for="search">Subject: </lable>
                 <input type="text" class="form-control" id="subject">
-                <lable for="number">Location: </lable>
-                <input type="text" class="form-control" id="location">
             </div>
-                <button type="button" class="btn btn-default" id='submit'>Submit</button>
+                <button type="submit" class="btn btn-default" id="submit">Submit</button>
         </form>
         </div>
     </div>
+    </div>
+    <div id="results">
+        <br>
+    <div class="row">
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                    <div class="panel-title">
+                        <strong>
+                        <i class="fa fa-table"></i>Top Related Articles</strong>
+                    </div>
+                    </div>
+                    <ul id="articleList" class="list-group">
+                    <ul class="pager">
+                        <li class="previous"><a href="" onclick="prevPage(); return false;">«</a></li>
+                        <li class="next"><a href="" onclick="nextPage(); return false;">»</a></li>
+                    </ul>
+                </ul>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                    <div class="panel-title">
+                        <strong>
+                        <i class="fa fa-table"></i>Non-Profit Organizations</strong>
+                    </div>
+                    </div>
+                    <ul id="NPOList" class="npo-group">
+                    <ul class="pager">
+                        <li class="previous"><a href="" onclick="prevPage(); return false;">«</a></li>
+                        <li class="next"><a href="" onclick="nextPage(); return false;">»</a></li>
+                    </ul>
+                </ul>
+                </div>
+            </div>
+            </div>
+    </div>
 </div>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="./assets/javascript/wiki.js"></script>
 </body>
 </html>
