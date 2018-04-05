@@ -6,6 +6,9 @@
     <title>Search Results</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='assets/javascript/npResult.js' type='application/javascript'></script>
 </head>
 <body>
     <nav class="navbar navbar-default">
@@ -42,10 +45,30 @@
                 <i class="fa fa-table"></i>Top Related Articles</strong>
             </div>
             </div>
-            <ul id="articleList" class="list-group"></ul>
+            <ul id="articleList" class="list-group">
+                <li class='content' id='art0'>1</li>
+                <br>
+                <li class='content' id='art1'>2</li>
+                <br>
+                <li class='content' id='art2'>3</li>
+                <br>
+                <li class='content' id='art3'></li>
+                <br>
+                <li class='content' id='art4'></li>
+                <br>
+                <li class='content' id='art5'></li>
+                <br>
+                <li class='content' id='art6'></li>
+                <br>
+                <li class='content' id='art7'></li>
+                <br>
+                <li class='content' id='art8'></li>
+                <br>
+                <li class='content' id='art9'></li>
+            </ul>
             <ul class="pager">
-                <li class="previous"><a href="" onclick="prevPage(); return false;">«</a></li>
-                <li class="next"><a href="" onclick="nextPage(); return false;">»</a></li>
+                <li class="previous" id='prevArt'><a href="#">«</a></li>
+                <li class="next" id='nextArt'><a href="#">»</a></li>
             </ul>
         </div>
     </div>
@@ -57,17 +80,34 @@
                 <i class="fa fa-table"></i>Non-Profit Organizations</strong>
             </div>
             </div>
-            <ul id="NPOList" class="list-group"></ul>
+            <ul id="npoList" class="list-group">
+                <li class='content' id='np0'>1</li>
+                <br>
+                <li class='content' id='np1'>2</li>
+                <br>
+                <li class='content' id='np2'>3</li>
+                <br>
+                <li class='content' id='np3'></li>
+                <br>
+                <li class='content' id='np4'></li>
+                <br>
+                <li class='content' id='np5'></li>
+                <br>
+                <li class='content' id='np6'></li>
+                <br>
+                <li class='content' id='np7'></li>
+                <br>
+                <li class='content' id='np8'></li>
+                <br>
+                <li class='content' id='np9'></li>
+            </ul>
             <ul class="pager">
-                <li class="previous"><a href="" onclick="prevPage(); return false;">«</a></li>
-                <li class="next"><a href="" onclick="nextPage(); return false;">»</a></li>
+                <li class="previous" id='prevNp'><a href="#">«</a></li>
+                <li class="next" id='nextNp'><a href='#'>»</a></li>
             </ul>
         </div>
     </div>
     </div>
 </div>
-
-    
-    <script src="https://code.jquery.com/jquery.js"></script>
 </body>
 </html>
