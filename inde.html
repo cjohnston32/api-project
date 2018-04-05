@@ -6,7 +6,6 @@
     <title>Practice 1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <style src="/Users/mackflo/gt/MackFlo/api-project/style.css"></style>
 </head>
 <body>
     <nav class="navbar navbar-default">
@@ -29,7 +28,7 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3" >
     <br>
-        <form class="form" action="">
+        <form class="form">
             <div class="form-group">
                 <lable for="search">Subject: </lable>
                 <input type="text" class="form-control" id="subject">
@@ -40,6 +39,13 @@
     </div>
     </div>
     <div id="results">
+            <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="searchName">
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dlabels">
+                      <li id="searchDefinition"></li>
+                    </ul>
+                  </div>
         <br>
     <div class="row">
             <div class="col-lg-6">
@@ -79,6 +85,6 @@
 </div>
 
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="./assets/javascript/wiki.js"></script>
+    <script src="./assets/javascript/news.js"></script>
 </body>
 </html>
