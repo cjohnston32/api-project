@@ -1,7 +1,10 @@
+
+
 // --- Global variables ---
 var index = 0;
 var orgArray;
 var apiURL;
+var hashArray;
 
 // makeNpSearch() - makes the search URL for np API call on npResult.js
 /**
@@ -32,11 +35,10 @@ function makeHashtagSearch() { // Creates URL for accessing RiteKit API
 
 // hashtagHandler - Accesses RiteKit API data for similar hashtags
 /** 
- * @returns {object}
+ * @param {object} hashAPI
  */
 function hashtagHandler (hashAPI) {
     hashArray = hashAPI.data;
-    console.log(hashArray);
     for (var x=0; x<hashArray.length-1; x++) {
         var hashtagName = hashArray[x].hashtag;
     }
@@ -44,9 +46,8 @@ function hashtagHandler (hashAPI) {
 
 // updatePage - Updates list of 10 nonprofits
 function updatePage() {
-    var indexEnd = index + 9;
     var elementNum = 0; // 0-9
-    for (index; index<=indexEnd; index++) {
+    for (index; index<=index+9; index++) {
         // --- Indexing Updates ---
         elementNum = elementNum.toString();
         var npDiv = 'np' + elementNum; // ID of div for a single non-profit. Range: np0-np9
@@ -81,14 +82,15 @@ $(document).ready(function() {
     });
     // To run AJAX calls
     $('#submit').on('click', function () {
-
         var hashURL = makeHashtagSearch();
+        console.log(hashURL);
         $.ajax({
             url: hashURL,
             method: 'GET'
-        }).then(hashtagHandler).
-        then(makeNpSearch).
-        then(function() {
+        }).then(hashtagHandler)
+        console.log(hashArray);
+        
+        /**setTimeout(function() {
             var searchURL = apiURL;
             $.ajax({
                 url: searchURL,
@@ -96,7 +98,7 @@ $(document).ready(function() {
             }).then(npHandler)
             .catch(function(err) {alert('error:' + err.message);})
             console.log(apiURL);
-        });
+        }, 100000);**/
     });
     // When user presses next page button
     $('#nextNp').on('click', function(event) {
