@@ -1,20 +1,120 @@
+<!DOCTYPE html>
 <html lang='en-US'>
-    <head>
-        <title>TITLE</title>
-        <meta charset='utf-8'>
-        <script src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js'></script>
-        <script src='assets/javascript/main.js' type='application/javascript'></script>
-    </head>
-    <body>
-        <form id='searchForm'>
-            Search by a topic:<br>
-            <input type='text' id='searchTopic'>
-            <input type='button' id='submit' value='Submit'>
-        </form>
-        <div id='test'>
-            
+<head>
+    <meta charset="utf-8">
+    <title>Practice 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel='stylesheet' type='text/css' href='assets/css/style.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Get Educated</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
-    </body>
+    </nav>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Get Educated</h1>
+        </div>
+    </div>
+    <div id="search">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+            <br>
+            <form class="form" action="">
+                <div class="form-group">
+                <lable for="search">Subject: </lable>
+                <input type="text" class="form-control" id="subject">
+                </div>
+                <button type="submit" class="btn btn-default" id="submit">Submit</button>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div id="results">
+        <br>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                    <div class="panel-title">
+                        <strong>
+                        <i class="fa fa-table"></i>Top Related Articles</strong>
+                    </div>
+                    </div>
+                    <ul id="articleList" class="list-group">
+                        <li class='content' id='art0'>1</li>
+                        <br>
+                        <li class='content' id='art1'>2</li>
+                        <br>
+                        <li class='content' id='art2'>3</li>
+                        <br>
+                        <li class='content' id='art3'></li>
+                        <br>
+                        <li class='content' id='art4'></li>
+                        <br>
+                        <li class='content' id='art5'></li>
+                        <br>
+                        <li class='content' id='art6'></li>
+                        <br>
+                        <li class='content' id='art7'></li>
+                        <br>
+                        <li class='content' id='art8'></li>
+                        <br>
+                        <li class='content' id='art9'></li>
+                    </ul>
+                    <ul class="pager">
+                        <li class="previous" id='prevArt'><a href="#">«</a></li>
+                        <li class="next" id='nextArt'><a href="#">»</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                    <div class="panel-title">
+                        <strong>
+                        <i class="fa fa-table"></i>Non-Profit Organizations</strong>
+                    </div>
+                    </div>
+                    <ul id="npoList" class="list-group">
+                        <li class='content' id='np0'>1</li>
+                        <br>
+                        <li class='content' id='np1'>2</li>
+                        <br>
+                        <li class='content' id='np2'>3</li>
+                        <br>
+                        <li class='content' id='np3'></li>
+                        <br>
+                        <li class='content' id='np4'></li>
+                        <br>
+                        <li class='content' id='np5'></li>
+                        <br>
+                        <li class='content' id='np6'></li>
+                        <br>
+                        <li class='content' id='np7'></li>
+                        <br>
+                        <li class='content' id='np8'></li>
+                        <br>
+                        <li class='content' id='np9'></li>
+                    </ul>
+                    <ul class="pager">
+                        <li class="previous" id='prevNp'><a href="#">«</a></li>
+                        <li class="next" id='nextNp'><a href='#'>»</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='assets/javascript/npIndex.js' type='application/javascript'></script>
+</body>
 </html>
-
-<!-- Test Branch Update-->
