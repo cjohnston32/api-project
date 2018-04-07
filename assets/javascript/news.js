@@ -42,9 +42,10 @@ $("#submit").on("click", function(){
         .then(function(jsonRes){
             console.log(jsonRes.articles)
             jsonRes.articles.forEach(element => {
-                var url=element.url;
-                function makeAllURLsWork(){(url.replace('/', ''))};
-                $('#articleInput').show().append(("<tr><td><a href="+element.url+">"+element.title + "</td></tr><br>"));
+                var url= element.url;
+                function makeAllURLsWork(){(url.replace('/', ''));
+                $('#articleInput').show().append(("<tr><td><a href="+url+'target="blank"'+"/a>"+element.title+"</td></tr><br>"));
+            }
             });
             
         })
