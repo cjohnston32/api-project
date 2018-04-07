@@ -5,6 +5,7 @@ The main section of the page details Wikipedia results based on the subject matt
 The side portion includes web articles relevant to the search via News API
 Below the News results is a form for user notes.
 There is an additional page to go back an review note entries submitted. 
+
 *** Future Upgrades ***
 1) Subject Section  --> Include image results portion 
 2) Articles Section --> cleaner styling in results
