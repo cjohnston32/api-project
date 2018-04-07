@@ -51,9 +51,42 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey){
 
   var userSubject = childSnapshot.val().subject;
   var userNote = childSnapshot.val().note;
-
+  // var $input = $('<input type="button" value="delete" />');
+ 
   // Add notes
-  $("#notes-table > tbody").append("<tr><td>" + userSubject + "</td><td>" + userNote + "</td></tr>");
+  
+  $("#notes-table > tbody").append("<tr id='comment'><td>" + userSubject + "</td><td>" + userNote + "</td><td>" + "<input type='button' value='Delete' />" + "</td></tr>" );
 
+  
+  $(document).on("click", "#comment", function() {
+
+    console.log("click");
+  
+    // Grabs text from li choice
+    var clickChoice = $(this).text();
+    console.log(clickChoice);
+  
+    // // Sets the choice in the current player object in firebase
+    // playerRef.child("choice").set(clickChoice);
+  
+    // onclick = function () {
+    //   document.getElementById('comment').remove(clickChoice);
+      
+           
+    // };
+    // // User has chosen, so removes choices and displays what they chose
+    // $(clickChoice).empty();
+    // $("#player" + playerNum + "chosen").text(clickChoice);
+  
+    // // Increments turn. Turn goes from:
+    // // 1 - player 1
+    // // 2 - player 2
+    // // 3 - determine winner
+    // currentTurnRef.transaction(function(turn) {
+    //   return turn + 1;
+    // });
+  });
+
+        // need to create a unqiue id b/c currently deleting in order
 });
 
