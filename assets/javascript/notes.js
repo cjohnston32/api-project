@@ -45,13 +45,25 @@ $("#add-note").on("click", function(event){
 // Child Add to Firebase 
 database.ref().on("child_added", function(childSnapshot, prevChildKey){
 
+<<<<<<< HEAD
+=======
+  console.log(childSnapshot.val());
+
+>>>>>>> 00d9b9157a29baf0b95e974a8b4704ad2ca1530e
   // Variable Storage
 
   var userSubject = childSnapshot.val().subject;
   var userNote = childSnapshot.val().note;
 
   // Add notes
+<<<<<<< HEAD
     $("#notes-table > tbody").append("<tr id='comment'><td>" + userSubject + "</td><td>" + userNote + "</td></tr>" );
 
 
 });
+=======
+  $("#notes-table > tbody").append("<tr><td>" + userSubject + "</td><td>" + userNote + "</td></tr>");
+
+});
+
+>>>>>>> 00d9b9157a29baf0b95e974a8b4704ad2ca1530e
