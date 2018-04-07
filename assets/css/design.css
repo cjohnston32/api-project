@@ -23,3 +23,15 @@ a link, a:visited{
 #grey {
     background-color: #708090;
 }
+
+#sBar {
+    width:88%;
+}
+
+#subject {
+    width:100%;
+}
+
+#formBar {
+    text-align:center;
+}
